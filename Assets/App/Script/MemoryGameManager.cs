@@ -14,9 +14,7 @@ public class MemoryGameManager : MonoBehaviour
     public TMP_Text scoreText;
     public GameObject homePanel;
     public GameObject winPanel;
-    public Button resetButton;
-    public Button homeButton;
-    public Button playButton;
+   
 
     private List<Card> cards = new List<Card>();
     private Card firstCard, secondCard;
@@ -155,5 +153,10 @@ public class MemoryGameManager : MonoBehaviour
         cards.Clear();
         firstCard = null;
         secondCard = null;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
